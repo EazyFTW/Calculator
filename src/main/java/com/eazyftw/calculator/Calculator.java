@@ -37,5 +37,4 @@ public class Calculator {
             System.out.println("That is not a valid integer.");
         }
     }
-
 }
