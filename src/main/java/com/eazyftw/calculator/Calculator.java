@@ -15,6 +15,10 @@ public class Calculator {
         String operation = input.next();
         int answer;
         OperationEnum operationEnum = OperationEnum.getOperationFromValue(operation);
+        if(operationEnum == null) {
+            System.out.println("Could not find an operation from " + operation + "!");
+            return;
+        }
         if(operationEnum == OperationEnum.ADDITION) {
             answer = number + number1;
         } else if(operationEnum == OperationEnum.SUBTRACTION) {
@@ -26,7 +30,7 @@ public class Calculator {
         } else {
             answer = 0;
         }
-        System.out.println("The answer is " + answer);
+        System.out.println("The answer is " + answer + ".");
 
 
     }
